@@ -106,7 +106,7 @@ module.exports = {
           comp.members.forEach(member => {
             console.log("filtered member", member)
             var contents = templates.render(member);
-            helpers.writeFile(util.format(options.output, member.refid), [contents]);
+            helpers.writeFile(util.format(options.output, member.name + '_' + member.refid), [contents]);
           })
         })
 
